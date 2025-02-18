@@ -1,10 +1,8 @@
 <template>
     <div>
-       <div class='grid grid-cols-4 gap-5'>
+       <div class='grid grid-cols-2 md:grid-cols-4 gap-5'>
         <div v-for='product in products'>
-            <NuxtLink :to="`/products/${product.id}`">
-                {{product.title}}
-            </NuxtLink>
+            <ProductCard :product="product" />
         </div>
        </div>
     </div>
